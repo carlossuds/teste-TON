@@ -6,9 +6,9 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/ton-logo.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#00c700"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -21,8 +21,8 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "foregroundImage": "./assets/ton-logo.png",
+        "backgroundColor": "#00c700"
       }
     },
     "web": {
