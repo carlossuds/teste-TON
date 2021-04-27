@@ -1,19 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, ActivityIndicator, Image } from 'react-native';
+import { ActivityIndicator } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
-import styles from './styles';
-import { colors } from '../../styles/colors';
-import Button from '../Button';
+
+import { Product } from '../../hooks/checkout';
+
 import ProductItem from '../ProductItem';
 
-interface Product {
-  category: string;
-  description: string;
-  id: number;
-  image: string;
-  price: number;
-  title: string;
-}
+import styles from './styles';
+import { colors } from '../../styles/colors';
 
 interface ProductListProps {
   data: Product[];

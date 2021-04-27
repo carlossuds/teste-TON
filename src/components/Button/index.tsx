@@ -5,12 +5,17 @@ import styles from './styles';
 
 interface ButtonProps extends RectButtonProps {
   title: string;
-  active?: boolean;
+  available?: boolean;
 }
 
-const Button: React.FC<ButtonProps> = ({ title, active = false, ...rest }) => {
+const Button: React.FC<ButtonProps> = ({ title, available, ...rest }) => {
   return (
-    <RectButton style={styles.button} {...rest}>
+    <RectButton
+      style={
+        available ? styles.button : { ...styles.button, ...styles.buttonRemove }
+      }
+      {...rest}
+    >
       <Text style={styles.text}>{title}</Text>
     </RectButton>
   );

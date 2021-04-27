@@ -14,6 +14,9 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     color: colors.white,
   },
+  buttonRemove: {
+    backgroundColor: colors.red,
+  },
 });
 
 export default styles;

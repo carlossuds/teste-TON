@@ -1,17 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Alert, View } from 'react-native';
-import { ProductList } from '../../components/ProductList';
-import { api } from '../../services/api';
-import styles from './styles';
 
-interface Product {
-  category: string;
-  description: string;
-  id: number;
-  image: string;
-  price: number;
-  title: string;
-}
+import { Product } from '../../hooks/checkout';
+
+import { ProductList } from '../../components/ProductList';
+
+import { api } from '../../services/api';
+
+import styles from './styles';
 
 export const Main: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([] as Product[]);
