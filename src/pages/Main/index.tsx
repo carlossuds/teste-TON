@@ -8,6 +8,7 @@ import { ProductList } from '../../components/ProductList';
 import { api } from '../../services/api';
 
 import styles from './styles';
+import { Header } from '../../components/Header';
 
 export const Main: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([] as Product[]);
@@ -28,8 +29,11 @@ export const Main: React.FC = () => {
   }, []);
 
   return (
-    <View style={styles.container}>
-      <ProductList data={products} />
-    </View>
+    <>
+      <Header />
+      <View style={styles.container}>
+        <ProductList data={products} />
+      </View>
+    </>
   );
 };

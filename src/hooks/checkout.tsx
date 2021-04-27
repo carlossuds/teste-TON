@@ -1,5 +1,4 @@
 import React, { createContext, useCallback, useContext, useState } from 'react';
-import { Header } from '../components/Header';
 
 export interface Product {
   category: string;
@@ -35,7 +34,6 @@ export const CheckoutProvider: React.FC = ({ children }) => {
     <CheckoutContext.Provider
       value={{ cartProducts, addToCart, removeFromCart }}
     >
-      <Header />
       {children}
     </CheckoutContext.Provider>
   );

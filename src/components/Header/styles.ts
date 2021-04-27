@@ -16,10 +16,15 @@ const styles = StyleSheet.create({
     right: '5%',
     top: '27.5%',
   },
+  backButton: {
+    position: 'absolute',
+    left: '5%',
+    top: '27.5%',
+  },
   notification: {
     position: 'absolute',
-    right: '5%',
-    top: '27.5%',
+    right: 0,
+    top: '12.5%',
     height: 15,
     width: 15,
     justifyContent: 'center',
