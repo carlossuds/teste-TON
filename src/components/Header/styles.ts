@@ -8,6 +8,7 @@ const styles = StyleSheet.create({
     height: 60,
     paddingVertical: 10,
     width: '100%',
+    backgroundColor: colors.white,
     borderBottomColor: colors.gray,
     borderBottomWidth: StyleSheet.hairlineWidth,
   },
@@ -33,6 +34,7 @@ const styles = StyleSheet.create({
     borderRadius: 500,
   },
   itemsInCart: {
+    textAlign: 'center',
     color: colors.white,
     fontSize: 10,
     fontWeight: 'bold',

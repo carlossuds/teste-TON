@@ -8,6 +8,8 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
     backgroundColor: colors.green,
     borderRadius: 4,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   text: {
     fontSize: 16,

@@ -3,12 +3,12 @@ import { Alert, View } from 'react-native';
 
 import { Product } from '../../hooks/checkout';
 
+import { Header } from '../../components/Header';
 import { ProductList } from '../../components/ProductList';
 
 import { api } from '../../services/api';
 
 import styles from './styles';
-import { Header } from '../../components/Header';
 
 export const Main: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([] as Product[]);

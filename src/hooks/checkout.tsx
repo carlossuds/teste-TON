@@ -1,4 +1,11 @@
-import React, { createContext, useCallback, useContext, useState } from 'react';
+import { useNavigation } from '@react-navigation/core';
+import React, {
+  createContext,
+  useCallback,
+  useContext,
+  useMemo,
+  useState,
+} from 'react';
 
 export interface Product {
   category: string;
@@ -12,7 +19,8 @@ export interface Product {
 interface CheckoutContextData {
   cartProducts: Product[];
   addToCart(product: Product): void;
-  removeFromCart(productId: Pick<Product, 'id'>): void;
+  removeFromCart(productId: number): void;
+  totalPrice: number;
 }
 
 const CheckoutContext = createContext<CheckoutContextData>(
@@ -30,9 +38,17 @@ export const CheckoutProvider: React.FC = ({ children }) => {
     setCartProducts(prev => prev.filter(product => product.id !== productId));
   }, []);
 
+  const totalPrice = useMemo<number>(() => {
+    const prices = cartProducts.map(product => product.price);
+
+    if (!prices.length) return 0;
+
+    return prices.reduce((acc, curr) => acc + curr);
+  }, [cartProducts]);
+
   return (
     <CheckoutContext.Provider
-      value={{ cartProducts, addToCart, removeFromCart }}
+      value={{ cartProducts, addToCart, removeFromCart, totalPrice }}
     >
       {children}
     </CheckoutContext.Provider>

@@ -4,7 +4,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 
 import { Product } from '../../hooks/checkout';
 
-import ProductItem from '../ProductItem';
+import { ProductItem } from '../ProductItem';
 
 import styles from './styles';
 import { colors } from '../../styles/colors';

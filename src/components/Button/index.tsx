@@ -8,7 +8,11 @@ interface ButtonProps extends RectButtonProps {
   available?: boolean;
 }
 
-const Button: React.FC<ButtonProps> = ({ title, available, ...rest }) => {
+export const Button: React.FC<ButtonProps> = ({
+  title,
+  available,
+  ...rest
+}) => {
   return (
     <RectButton
       style={
@@ -20,5 +24,3 @@ const Button: React.FC<ButtonProps> = ({ title, available, ...rest }) => {
     </RectButton>
   );
 };
-
-export default Button;

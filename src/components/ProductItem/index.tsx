@@ -3,7 +3,7 @@ import { View, Image, Text } from 'react-native';
 
 import { Product, useCheckout } from '../../hooks/checkout';
 
-import Button from '../Button';
+import { Button } from '../Button';
 
 import styles from './styles';
 
@@ -11,7 +11,7 @@ interface ProductItemProps {
   data: Product;
 }
 
-const ProductItem: React.FC<ProductItemProps> = ({ data }) => {
+export const ProductItem: React.FC<ProductItemProps> = ({ data }) => {
   const { cartProducts, addToCart, removeFromCart } = useCheckout();
 
   const isAvailable = useMemo(() => {
@@ -46,5 +46,3 @@ const ProductItem: React.FC<ProductItemProps> = ({ data }) => {
     </View>
   );
 };
-
-export default ProductItem;
