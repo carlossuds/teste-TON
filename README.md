@@ -8,6 +8,8 @@
 
 ✔️ Ao clicar no ícone do carrinho no header o usuário deve ser direcionado para o tela de carrinho onde vai listar os produtos dele, tendo a opção de excluir um produto do carrinho;
 
+<img src="presentation-gif.gif" height="590" width="280" />
+
 ## 🛠 Tecnologias
 
   <img src="https://miro.medium.com/max/816/1*mn6bOs7s6Qbao15PMNRyOA.png" width="16" height="16" /> Typescript
