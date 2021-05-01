@@ -3,7 +3,7 @@ import { View, Image, Text } from 'react-native';
 import { ScrollView, RectButton } from 'react-native-gesture-handler';
 
 import { Ionicons } from '@expo/vector-icons';
-import { useNavigation } from '@react-navigation/core';
+import { useNavigation } from '@react-navigation/native';
 import { useCheckout } from '../../hooks/checkout';
 
 import styles from './styles';

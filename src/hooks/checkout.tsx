@@ -1,4 +1,3 @@
-import { useNavigation } from '@react-navigation/core';
 import React, {
   createContext,
   useCallback,
@@ -58,8 +57,7 @@ export const CheckoutProvider: React.FC = ({ children }) => {
 export function useCheckout(): CheckoutContextData {
   const context = useContext(CheckoutContext);
 
-  if (!context)
-    throw new Error('useCheckout must be used within a CheckoutProvider');
+  if (!context) throw new Error('CheckoutProvider needed to call useCheckout');
 
   return context;
 }
