@@ -14,7 +14,7 @@ export const Main: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([] as Product[]);
 
   useEffect(() => {
-    const loadProducts = async () => {
+    const loadProducts = async (): Promise<void> => {
       try {
         const response = await api.get<Product[]>('/products');
         const { data } = response;
